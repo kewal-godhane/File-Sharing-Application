@@ -1,0 +1,77 @@
+/* creating variables in css */
+:root{
+    --main-bg-color:#eff5fe;
+    --border-color: #0288d147 ;
+}
+
+body,html{
+    font-family: system-ui;
+    background-color: var(--main-bg-color);
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body , .drop-zone{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.upload-container{
+    background: #ffff;
+    border-radius: 25px;
+    box-shadow: 0px 20px 20px #0000002e;
+}
+
+.drop-zone{
+    width: 500px;
+    min-height: 200px;
+    border: 2px dotted var(--border-color) ;
+    border-radius: 10px;
+    margin: 30px;
+}
+
+.icon-container{
+    width: 75px;
+    height: 100px;
+    position: relative;
+}
+
+.icon-container img{
+    width: 75px;
+    position: absolute;
+    transform-origin: bottom;
+    transition: transform 300ms ease-in-out;
+}
+.icon-container .center{
+    z-index: 2;
+}
+
+.dragged  .icon-container .right{
+    transform: rotate(10deg) translateX(20px);
+}
+
+.dragged  .icon-container .left{
+    transform: rotate(-10deg) translateX(-20px);
+}
+
+.dragged .icon-container .center{
+    transform: translateY(-5px);
+}
+
+/* means .dragged that has the class .drop-zone as well. */
+.dragged.drop-zone{
+    background-color: var(--main-bg-color);
+    border-color: rgb(127, 127, 218);
+}
+
+.fileInput{
+    display: none;
+}
+
+.browsebtn{
+    color: rgb(127, 127, 218);
+    cursor: pointer;
+}
