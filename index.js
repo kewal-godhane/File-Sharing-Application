@@ -4,7 +4,7 @@ const fileInput=document.querySelector(".fileInput");
 const fileurl=document.querySelector('#fileURL');
 
 // const baseURL = "https://innshare.herokuapp.com";
-const uploadURL = "http://localhost:3000/api/files"; 
+const uploadURL = "https://file-sharing-application-by-kewal.onrender.com/api/files"; 
 
 // some file dragged over the icons then this event will execute
 dropZone.addEventListener('dragover',(e)=>{
