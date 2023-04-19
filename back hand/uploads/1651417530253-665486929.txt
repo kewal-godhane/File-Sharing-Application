@@ -1,3 +1,0 @@
-1.basic website (porfolio)
-2.react app (using public api)
-3.web app uing backend(firebase)
