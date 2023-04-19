@@ -45,7 +45,11 @@ browsebtn.addEventListener('click',()=>{
     // if browsebtn get clicked we are making fileInput get clicked
     fileInput.click();
 })
-
+// after we click on browse btn it only open the window not upload the file , so to do that we have to add event listner(change) on fileInput
+fileInput.addEventListener("change",(e)=>{
+    console.log("done");
+    uploadFile();
+})
  
 const uploadFile=()=>{
     console.log("ke");
